@@ -16,8 +16,14 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'nome', 'email', 'password', 'dt_ent','foto','classe','observacao','nome_guerra','equipe_id',
+        'ismedico','isengenheiro','iscomunicador','telefone','pforte','pfraco','perfil','instagran',
+        'rg','cpf','sexo', 'arma'
     ];
+
+    public function equipe(){
+        return $this->belongsTo('App\Equipe','equipe_id');
+    }
 
     /**
      * The attributes that should be hidden for arrays.
