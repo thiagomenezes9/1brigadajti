@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Campo extends Model
 {
-    protected $fillable = ['nome','local','mapa'];
+    protected $fillable = ['nome','mapa','coodGoogle'];
 
 }

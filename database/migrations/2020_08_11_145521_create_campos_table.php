@@ -15,6 +15,11 @@ class CreateCamposTable extends Migration
     {
         Schema::create('campos', function (Blueprint $table) {
             $table->id();
+            $table->binary('mapa')->nullable();
+            $table->string('nome');
+            $table->string('coodGoogle');
+
+
             $table->timestamps();
         });
     }
